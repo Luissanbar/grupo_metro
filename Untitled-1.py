@@ -37,14 +37,24 @@ print(predictions)
 rmse_value = rmse(test, predictions)
 print('Error cuadrático medio (RMSE):', rmse_value)
 
-plt.plot(test.tail(10).index, test.tail(10), label='Observado')
-ploteado=plt.plot(test.tail(10).index, predictions[0:10], color='red', label='Predicción')
-plt.xlabel('num pas')
-plt.ylabel('Valor')
+plt.figure(figsize=(10, 6))
+
+# Gráfico de los valores observados
+plt.subplot(2, 1, 1)
+plt.plot(test.index, test, label='Observado', color='blue')
+plt.xlabel('Tiempo')
+plt.ylabel('Número de pasajeros')
+plt.title('Valores Observados')
+plt.legend()
+
+# Gráfico de las predicciones
+plt.subplot(2, 1, 2)
+plt.plot(test.index, predictions, label='Predicción', color='red')
+plt.xlabel('Tiempo')
+plt.ylabel('Número de pasajeros')
 plt.title('Predicciones ARIMA')
 plt.legend()
+plt.xlim(1747,1760)
+
+plt.tight_layout()
 plt.show()
-
-test.index
-
-predictions
