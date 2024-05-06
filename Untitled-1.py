@@ -11,8 +11,8 @@ data
 print(data.head())
 
 data.plot()
-plt.xlabel('num pas')
-plt.ylabel('valor')
+plt.xlabel('Tiempo')
+plt.ylabel('Número de pasajeros')
 plt.title('Serie Temporal')
 plt.show()
 
