@@ -16,8 +16,6 @@ plt.ylabel('Número de pasajeros')
 plt.title('Serie Temporal')
 plt.show()
 
-
-
 train_size = int(len((data)) * 0.8)
 train, test = data[:train_size], data[train_size:]
 train
